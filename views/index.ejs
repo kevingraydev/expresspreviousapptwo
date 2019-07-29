@@ -1,0 +1,103 @@
+<!-- //There were no changes in on the index.ejs. For mine app,
+there will be some changes in some parts of this based on my
+visual formatting. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wu Tang Crud</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Wu-Tang Name Generator - Crud</h1>
+
+      <form id="responses" action="index.html" method="post">
+        <div class="">
+
+            <legend>Do you like Piña Colada's?</legend>
+
+            <input type="radio" class = "positve" name="answer" value="yes">
+            <label for="yes">yes</label>
+
+            <input type="radio" id ="no" name="answer" value="no">
+            <label for="no">no</label>
+        </div>
+
+        <div class="">
+
+            <legend>Do you have any silbings?</legend>
+
+            <input type="radio" class = "positve" name="answer2" value="yes">
+            <label for="yes">yes</label>
+
+            <input type="radio" id ="no" name="answer2" value="no">
+            <label for="no">no</label>
+        </div>
+
+        <div class="">
+
+            <legend>Ever used a Ouija Board?</legend>
+
+            <input type="radio"  class = "positve"name="answer3" value="yes">
+            <label for="yes">yes</label>
+
+            <input type="radio" id ="no" name="answer3" value="no">
+            <label for="no">no</label>
+        </div>
+
+        <div class="">
+
+            <legend>Do you know how to use Chopsticks?</legend>
+
+            <input type="radio" class = "positve" name="answer4" value="yes">
+            <label for="yes">yes</label>
+
+            <input type="radio" id ="no" name="answer4" value="no">
+            <label for="no">no</label>
+        </div>
+
+        <div class="">
+            <legend>Have you ever left the United States? </legend>
+
+            <input type="radio" class = "positve" name="answer5" value="yes">
+            <label for="yes">yes</label>
+
+            <input type="radio" id ="no" name="answer5" value="no">
+            <label for="no">no</label>
+        </div>
+
+        <button type="button" name="button" id="submit">Submit!</button>
+
+        <h3>Your Wu Tang name is <span id="generatedName"></span></h3>
+
+      </form>
+
+
+  <h3>Messages</h3>
+  <ul class="messages">
+  <% for(var i=0; i<messages.length; i++) {%>
+    <li class="message">
+      <span><%= messages[i].generatedName %></span>
+      <span><%= messages[i].thumbUp %></span>
+      <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+      <span><i class="fa fa-thumbs-down" aria-hidden="true"></i></span>
+      <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+    </li>
+  <% } %>
+  </ul>
+<!--
+  <h2>Add a message</h2>
+
+  <form action="/messages" method="POST">
+    <input type="text" placeholder="name" name="name">
+    <input type="text" placeholder="message" name="msg">
+    <button type="submit">Submit</button>
+  </form> -->
+
+  <script src="main.js"></script>
+
+</body>
+</html>
